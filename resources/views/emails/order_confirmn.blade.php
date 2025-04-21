@@ -138,7 +138,7 @@
         <!-- Header Section -->
         <div class="img-fluid">
             <img src="https://res.cloudinary.com/dtq5zfk6h/image/upload/v1731262338/cxhxahvjz9seanpdoai4.png"
-                alt="Food Haven Logo">
+                alt="Haha Shop Logo">
         </div>
         <div class="email-header">
             <h1>CẢM ƠN BẠN ĐÃ ĐẶT HÀNG !</h1>
