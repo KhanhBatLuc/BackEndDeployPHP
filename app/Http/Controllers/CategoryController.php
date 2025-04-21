@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
 
-        $search = $request->input('search');
+        $search = '';
         $categories = Category::when($search, function ($query, $search) {
             return $query->where('name', 'like', '%' . $search . '%');
         })->orderBy('id', 'desc')->paginate(20)->appends(request()->all());
