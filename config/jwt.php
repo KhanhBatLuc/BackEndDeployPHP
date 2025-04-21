@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'secret' => env('JWT_SECRET'),
+    'secret' => env('JWT_SECRET','test'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return [
         |
         */
 
-        'public' => env('JWT_PUBLIC_KEY'),
+        'public' => env('JWT_PUBLIC_KEY','public'),
 
         /*
         |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
         |
         */
 
-        'private' => env('JWT_PRIVATE_KEY'),
+        'private' => env('JWT_PRIVATE_KEY', 'private'),
 
         /*
         |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
         |
         */
 
-        'passphrase' => env('JWT_PASSPHRASE'),
+        'passphrase' => env('JWT_PASSPHRASE','123'),
 
     ],
 

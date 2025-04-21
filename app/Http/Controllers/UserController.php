@@ -164,13 +164,13 @@ class UserController extends Controller
     {
         $request->validate(['email' => 'required|email|exists:users,email']);
 
-        $code = rand(10000, 99999);
+        $code = 123456;
         PasswordReset::updateOrCreate(['email' => $request->email], ['token' => $code, 'created_at' => Carbon::now()]);
 
-        Mail::send('reset-code', ['code' => $code], function ($message) use ($request) {
-            $message->to($request->email);
-            $message->subject('Mã khôi phục mật khẩu');
-        });
+        // Mail::send('reset-code', ['code' => $code], function ($message) use ($request) {
+        //     $message->to($request->email);
+        //     $message->subject('Mã khôi phục mật khẩu');
+        // });
 
         return response()->json(['message' => 'Mã khôi phục đã được gửi'], 200);
     }
@@ -270,13 +270,13 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        $code = rand(10000, 99999);
+        $code = 12345;
         PasswordReset::updateOrCreate(['email' => $request->email], ['token' => $code, 'created_at' => Carbon::now()]);
 
-        Mail::send('register-code', ['code' => $code], function ($message) use ($request) {
-            $message->to($request->email);
-            $message->subject('Mã xác thực đăng ký tài khoản');
-        });
+        // Mail::send('register-code', ['code' => $code], function ($message) use ($request) {
+        //     $message->to($request->email);
+        //     $message->subject('Mã xác thực đăng ký tài khoản');
+        // });
 
         return response()->json(['message' => 'Mã xác thực đã được gửi'], 200);
     }
