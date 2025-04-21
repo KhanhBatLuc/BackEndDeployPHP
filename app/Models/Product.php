@@ -35,6 +35,6 @@ class Product extends Model
         return $this->product_variants()->count(); // Đếm số lượng flash sale products
     }
     protected $appends = ['ProductVariantCount'];
-    protected $with = ['ProductImages','category','Brand'];
+    protected $with = ['ProductImages','Category','Brand'];
  
 }
