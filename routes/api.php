@@ -31,6 +31,11 @@ use BotMan\BotMan\Middleware\Dialogflow;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 
+Route::options('/{any}', function () {
+    return response('', 200);
+})->where('any', '.*');
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
