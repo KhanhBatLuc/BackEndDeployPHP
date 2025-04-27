@@ -30,7 +30,7 @@ class OrderConfirmationMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'HAVEN - Xác nhận đơn hàng',
+            subject: 'Haha - Xác nhận đơn hàng',
         );
     }
 

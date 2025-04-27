@@ -28,7 +28,7 @@ class PaymentController extends Controller
         $vnp_HashSecret = env('VNP_HASH_SECRET'); //Chuỗi bí mật
         $vnp_TxnRef = $order->invoice_code; //Mã đơn hàng.
         $vnp_OrderInfo = "Thanh toán hóa đơn đơn hàng $order->invoice_code";
-        $vnp_OrderType = "Haven";
+        $vnp_OrderType = "Haha";
         $vnp_Amount = $order->total * 100;
         $vnp_Locale = "VN";
         $vnp_BankCode = "NCB";

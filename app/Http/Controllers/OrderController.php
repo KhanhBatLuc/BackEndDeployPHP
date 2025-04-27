@@ -52,7 +52,7 @@ class OrderController extends Controller
 
         if($orderData['payment_method'] == 1){
             // Gửi mail xác nhận đơn hàng
-            Mail::to($orderData['email'])->send(new OrderConfirmationMail($order));
+            // Mail::to($orderData['email'])->send(new OrderConfirmationMail($order));
         }
 
         // Lặp qua từng sản phẩm và cập nhật kho
